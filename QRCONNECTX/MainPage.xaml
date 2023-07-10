@@ -33,7 +33,7 @@
             <!-- ==== tercera casilla de olvido de contraseña ==== -->
             <Label Grid.Row="5" Text="Olvidaste tu contraseña?" TextColor="White" FontAttributes="Bold" FontSize="15" HorizontalOptions="End" />
 
-            <Button x:Name="btnInicio" Clicked="btnInicio_Clicked" Grid.Row="7" BackgroundColor="#fd684d" Text="Iniciar sesión" TextColor="White" CornerRadius="20" FontSize="15" FontAttributes="Bold" HorizontalOptions="FillAndExpand"/>
+            <Button x:Name="btnInicio" Clicked="btnInicio_Clicked"   Grid.Row="7" BackgroundColor="#fd684d" Text="Iniciar sesión" TextColor="White" CornerRadius="20" FontSize="15" FontAttributes="Bold" HorizontalOptions="FillAndExpand"/>
 
             
         </Grid>
