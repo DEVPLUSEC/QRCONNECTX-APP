@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QRCONNECTX.paginas.inicio_sesion"
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#1a3069">
+    <ContentPage.Content>
+
+        <!-- ==== Grilla de login ==== -->
+        <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto" RowSpacing="15" VerticalOptions="CenterAndExpand" Padding="30,0">
+
+            <!-- ==== Logo de aplicacion ==== -->
+            <Image Grid.Row="0" Source="QRCONNECTX_2" HeightRequest="250" WidthRequest="250" Aspect="AspectFit"/>
+
+            <!-- ==== Span de validacion de datos API ==== -->
+            <Label x:Name="dataSpa" Grid.Row="1" FontSize="15" IsVisible="false" HorizontalTextAlignment="Center"/>
+
+            <!-- ==== Casilla de correo ==== -->
+            <Label Grid.Row="2" Text="Correo electrónico" TextColor="White" FontSize="15" />
+            <Frame x:Name="emailFra" Grid.Row="3" CornerRadius="15"  Padding="0" HasShadow="False">
+                <StackLayout>
+                    <Entry x:Name="emailTxt" TextTransform="Lowercase" Keyboard="Email"  Placeholder="email@example.com"/>
+                </StackLayout>
+            </Frame>
+            <Label x:Name="emailSpa" Grid.Row="4" Text="*Escriba un correo electronico correcto" TextColor="red" FontSize="15" IsVisible="false"/>
+
+            <!-- ==== Casilla de contraseña ==== -->
+            <Label Grid.Row="5" Text="Contraseña" TextColor="White" FontSize="15" />
+            <Frame x:Name="passFra" Grid.Row="6" CornerRadius="15"  Padding="0" HasShadow="False">
+                <StackLayout>
+                    <Entry x:Name="passTxt" IsPassword="True" Keyboard="Text"  Placeholder="***********"/>
+                </StackLayout>
+            </Frame>
+            <Label x:Name="passSpa" Grid.Row="7" Text="*Escriba una contraseña correcta" TextColor="red" FontSize="15" IsVisible="false" />
+
+            <!-- ==== Casilla de olvido de contraseña ==== -->
+            <Label Grid.Row="8" Text="Olvidaste tu contraseña?" TextColor="White" FontAttributes="Bold" FontSize="15" HorizontalOptions="End" />
+
+            <!-- ==== Casilla de Boton de inicio de sesion ==== -->
+            <Button x:Name="btnInicio" Clicked="btnInicio_Clicked" Grid.Row="9" BackgroundColor="#fd684d" Text="Iniciar sesión" TextColor="White" CornerRadius="20" FontSize="15" FontAttributes="Bold" HorizontalOptions="FillAndExpand"/>
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

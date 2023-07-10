@@ -10,7 +10,7 @@ namespace QRCONNECTX
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new paginas.inicio_sesion());
         }
 
         protected override void OnStart()
