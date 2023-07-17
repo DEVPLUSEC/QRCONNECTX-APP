@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QRCONNECTX.paginas.escaner"
+             Title="Escaner"
+             IconImageSource="codigo_qr">
+    <ContentPage.Content>
+        <StackLayout>
+            
+
+            
+
+            <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto" RowSpacing="15" VerticalOptions="CenterAndExpand" Padding="30,0">
+
+                <Button x:Name="escanerBtn" Grid.Row="0" Text="Leer Qr" Clicked="escanerBtn_Clicked"/>
+                
+                <!-- ==== CNombre de equipo ==== -->
+                <Label Grid.Row="2" Text="Nombre equipo" TextColor="White" FontSize="15" />
+                <Frame x:Name="emailFra" Grid.Row="3" CornerRadius="15"  Padding="10" HasShadow="False">
+                    <StackLayout>
+                        <Label x:Name="nomEq" Grid.Row="4" Text="*" TextColor="green" FontSize="15"/>
+                    </StackLayout>
+                </Frame>
+
+                <!-- ==== Marca de equipo ==== -->
+                <Label Grid.Row="5" Text="Marca de equipo" TextColor="White" FontSize="15" />
+                <Frame x:Name="marFra" Grid.Row="6" CornerRadius="15"  Padding="10" HasShadow="False">
+                    <StackLayout>
+                        <Label x:Name="marEq" Grid.Row="7" Text="*" TextColor="green" FontSize="15"/>
+                    </StackLayout>
+                </Frame>
+
+                <!-- ==== Caracteristicas de equipo ==== -->
+                <Label Grid.Row="8" Text="Caracteristicas de equipo" TextColor="White" FontSize="15" />
+                <Frame x:Name="carFra" Grid.Row="9" CornerRadius="15"  Padding="10" HasShadow="False">
+                    <StackLayout>
+                        <Label x:Name="carEq" Grid.Row="10" Text="*" TextColor="green" FontSize="15"/>
+                    </StackLayout>
+                </Frame>
+                
+                <!-- ==== Descripcion de equipo ==== -->
+                <Label Grid.Row="11" Text="Caracteristicas de equipo" TextColor="White" FontSize="15" />
+                <Frame x:Name="desFra" Grid.Row="12" CornerRadius="15"  Padding="10" HasShadow="False">
+                    <StackLayout>
+                        <Label x:Name="desEq" Grid.Row="13" Text="*" TextColor="green" FontSize="15" />
+                    </StackLayout>
+                </Frame>
+
+            </Grid>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

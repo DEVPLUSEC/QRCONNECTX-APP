@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QRCONNECTX.paginas.equipos"
+             Title="Equipos"
+             
+             IconImageSource="computadora">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Agregar" Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <ScrollView>
+        <ListView x:Name="listaEquipos"
+              HasUnevenRows="True"
+              ItemTapped="Handle_ItemTapped"
+            >
+            <!--Built in Cells-->
+            <ListView.ItemTemplate >
+                <DataTemplate >
+                        <ViewCell >
+                            <Frame Margin="10" CornerRadius="15"  Padding="10" HasShadow="False">
+                                <StackLayout>
+                                    <Label Text="{Binding nombre}" TextColor="black" FontSize="15"/>
+                                    <Label Text="{Binding descripcion}" TextColor="black" FontSize="15"/>
+                                </StackLayout>
+                            </Frame>
+                    
+                        </ViewCell>
+                    </DataTemplate>
+            </ListView.ItemTemplate>
+    
+    
+          </ListView>
+    </ScrollView>
+</ContentPage>

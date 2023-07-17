@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Acr.UserDialogs;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -82,6 +83,7 @@ namespace QRCONNECTX.paginas
         private async Task comprobar(string username, string password)
         {
 
+           
 
             HttpClient client = new HttpClient();
             
@@ -93,12 +95,15 @@ namespace QRCONNECTX.paginas
             Console.WriteLine(result.ToString());
 
 
+
             dataSpa.TextColor = Color.Red;
 
             switch (result.ToString())
             {
                 case "1":
                     Console.WriteLine("Datos validos");
+                   
+                    Navigation.PushAsync(new principal(username));
                     break;
                 case "2": 
                     dataSpa.Text = "Contraseña incorrecta";

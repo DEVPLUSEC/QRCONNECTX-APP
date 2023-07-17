@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Local="clr-namespace:QRCONNECTX.paginas"
+             x:Class="QRCONNECTX.paginas.principal"
+            NavigationPage.HasNavigationBar="False"
+            SelectedTabColor="#584df2"
+            UnselectedTabColor="gray"
+             >
+    <Local:inicio x:Name="inicioTab"/>
+    <Local:equipos x:Name="equiposTab"/>
+    <Local:escaner x:Name="escanerTab"/>
+    <Local:otros x:Name="otrosTab" />
+    <Local:perfil x:Name="perfilTab"/>
+    
+
+
+
+</TabbedPage>
